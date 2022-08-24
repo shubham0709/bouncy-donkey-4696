@@ -1,0 +1,42 @@
+.navbar {
+  /* background-color: red; */
+  /* border: 1px solid red; */
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+}
+.leftDiv {
+  width: 180px;
+  height: inherit;
+  /* border: 1px solid red; */
+}
+.leftDiv > img {
+  width: 100%;
+  height: inherit;
+}
+
+.rightDiv {
+  width: 60vw;
+  /* border: 1px solid red; */
+}
+.rightDiv > span {
+  color: #3b8fc2;
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: bold;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.navbarBtn {
+  width: 250px;
+  height: inherit;
+  padding: 12px 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  background-color: #3b8fc2;
+}
