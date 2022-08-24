@@ -1,0 +1,125 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginPage {
+  width: 650px;
+  height: 750px;
+  margin-top: 100px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* border: 1px solid red; */
+  padding: 30px;
+}
+.signUpLogo {
+  width: 30%;
+  margin-right: auto;
+  /* border: 1px solid red; */
+}
+
+.signInTitle {
+  margin-top: 10px;
+  /* border: 1px solid red; */
+  font-size: 30px;
+  font-weight: 500;
+  /* padding: 20px; */
+}
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 0;
+  /* border: 1px solid red; */
+}
+.signupEmailInput,
+.signupPasswordInput,
+.signupFullnameInput {
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 2px solid gray;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.signupEmailInput:focus,
+.signupPasswordInput:focus,
+.signupFullnameInput:focus {
+  outline-color: rgba(202, 48, 48, 0.539);
+}
+.fullnameDisc,
+.emailDisc {
+  color: gray;
+  margin-bottom: 5px;
+}
+.signupEmail,
+.signupPassword,
+.signupFullname {
+  color: gray;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.signupDiv {
+  width: 100%;
+  /* border: 1px solid red; */
+  padding-bottom: 10px;
+  /* border-bottom: 1px solid grey; */
+}
+.signupBtn {
+  margin: auto;
+  width: 20%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(6, 142, 247);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.signInBtn + div {
+  color: rgb(6, 142, 247);
+  font-size: 18px;
+  text-decoration: dashed;
+  cursor: pointer;
+}
+
+.signupLink {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+.signupLink > Span {
+  color: rgb(6, 142, 247);
+}
+.dot {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  /* align-items: c; */
+}
+.dot > li:first-child {
+  list-style: disc;
+  color: rgb(6, 142, 247);
+  margin-left: 30px;
+  font-size: 50px;
+}
+.dot > li:last-child {
+  list-style: circle;
+  margin-left: 30px;
+  font-size: 50px;
+}
+
+.spicaLogo {
+  width: 120px;
+  /* border: 1px solid red; */
+  margin: auto;
+}
