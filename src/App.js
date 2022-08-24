@@ -1,4 +1,5 @@
 import "./App.css";
+import Login from "./components/auth/Login";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -6,9 +7,10 @@ import Home from "./pages/Home";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar />
       <Home></Home>
-      <Footer />
+      <Footer /> */}
+      <Login />
     </div>
   );
 }
