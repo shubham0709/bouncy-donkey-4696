@@ -1,11 +1,12 @@
-.login {
+.signupPage2 {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.loginPage {
+
+.signupPage2Div {
   width: 650px;
   height: 750px;
   margin-top: 100px;
@@ -13,13 +14,13 @@
   /* border: 1px solid red; */
   padding: 30px;
 }
-.signUpLogo {
+.signUpPage2Logo {
   width: 30%;
   margin-right: auto;
   /* border: 1px solid red; */
 }
 
-.signInTitle {
+.signupPage2InTitle {
   margin-top: 10px;
   /* border: 1px solid red; */
   font-size: 30px;
@@ -27,13 +28,14 @@
   /* padding: 20px; */
 }
 
-.signUpForm {
+.signUpPage2FormDiv {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 30px 0;
   /* border: 1px solid red; */
 }
+
 .signupEmailInput,
 .signupPasswordInput,
 .signupFullnameInput {
@@ -72,7 +74,7 @@
 }
 .signupBtn {
   margin: auto;
-  width: 20%;
+  width: 60%;
   text-align: center;
   font-weight: bold;
   font-size: 20px;
@@ -82,38 +84,29 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.signInBtn + div {
+
+.backPage2 {
+  text-align: center;
   color: rgb(6, 142, 247);
-  font-size: 18px;
-  text-decoration: dashed;
-  cursor: pointer;
+  font-size: 20px;
 }
 
-.signupLink {
-  color: black;
-  font-size: 18px;
-  margin-bottom: 10px;
-
-  cursor: pointer;
-}
-.signupLink > Span {
-  color: rgb(6, 142, 247);
-}
-.dot {
+.dotPage2 {
   width: 20px;
   display: flex;
   justify-content: center;
   margin: auto;
-  /* align-items: c; */
 }
-.dot > li:first-child {
-  list-style: disc;
-  color: rgb(6, 142, 247);
+
+.dotPage2 > li:first-child {
   margin-left: 30px;
   font-size: 50px;
-}
-.dot > li:last-child {
   list-style: circle;
+}
+
+.dotPage2 > li:last-child {
+  color: rgb(6, 142, 247);
+  list-style: disc;
   margin-left: 30px;
   font-size: 50px;
 }

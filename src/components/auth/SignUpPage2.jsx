@@ -1,20 +1,20 @@
 import React from "react";
-import "./signup.css";
+import "./signupPage2.css";
 
-const SIgnUpPage2 = () => {
+const SignUpPage2 = () => {
   return (
-    <div className="login">
-      <div className="loginPage">
-        <div className="signUpLogo">
+    <div className="signupPage2">
+      <div className="signupPage2Div">
+        <div className="signUpPage2Logo">
           <img
             src="https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fd37c83dfa3ccb0d2d9836f_myhours-logo.svg"
             alt=""
           />
         </div>
-        <div className="signInTitle">Details about your company</div>
+        <div className="signupPage2InTitle">Details about your company</div>
         {/* form  */}
-        <div className="signInFormDiv">
-          <form className="signUpForm">
+        <div className="signUpPage2FormDiv">
+          <form className="signUpPage2Form">
             <span className="signupFullname">COMPANY NAME</span>
 
             <input
@@ -48,13 +48,15 @@ const SIgnUpPage2 = () => {
             <div className="signupDiv">
               <div className="signupBtn">Create New Company</div>
             </div>
-            <span className="back">Back</span>
+            <div className="backPage2"> Back </div>
           </form>
         </div>
-        <ul className="dot">
+
+        <ul className="dotPage2">
           <li></li>
           <li></li>
         </ul>
+
         {/* lnk */}
         <div className="spicaLogo">
           <img
@@ -67,4 +69,4 @@ const SIgnUpPage2 = () => {
   );
 };
 
-export default SIgnUpPage2;
+export default SignUpPage2;
