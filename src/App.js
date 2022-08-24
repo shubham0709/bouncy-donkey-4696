@@ -1,11 +1,11 @@
-import './App.css';
-import Home from './pages/Home';
+import "./App.css";
+import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
-import { Box } from "@chakra-ui/react"
-import HowItWorks from './pages/HowItWorks';
-import UseCases from './pages/UseCases';
-import Project from './pages/project/Project';
-import AddProject from './pages/project/AddProject';
+import { Box } from "@chakra-ui/react";
+import HowItWorks from "./pages/HowItWorks";
+import UseCases from "./pages/UseCases";
+import Project from "./pages/project/Project";
+import AddProject from "./pages/project/AddProject";
 
 function App() {
   return (
@@ -22,4 +22,3 @@ function App() {
 }
 
 export default App;
-
