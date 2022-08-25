@@ -13,6 +13,7 @@ import React, { useState } from "react";
 import { FaQuestionCircle } from "react-icons/fa";
 import { addClient } from "./functions";
 import { useNavigate } from "react-router-dom";
+import Sidebar from "../Sidebar";
 
 const ProjectList = () => {
   const navigate = useNavigate();
@@ -47,7 +48,9 @@ const ProjectList = () => {
   };
   return (
     <Flex>
-      <Box w="15%" bg="blue.200"></Box>
+      <Box w="15%" bg="blue.200">
+        <Sidebar />
+      </Box>
       <FormControl w="60%" m="auto">
         <VStack p="2rem 1rem" w="60%" m="auto" align="left" gap="15px">
           <Flex gap="20px" align="center" justify="left">

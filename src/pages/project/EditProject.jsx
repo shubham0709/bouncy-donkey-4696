@@ -19,6 +19,7 @@ import {
   editSingleProjectAPI,
   getClientsAPI,
 } from "./functions";
+import Sidebar from "../Sidebar";
 
 const EditProject = () => {
   const navigate = useNavigate();
@@ -65,7 +66,9 @@ const EditProject = () => {
 
   return (
     <Flex>
-      <Box w="15%" bg="blue.200"></Box>
+      <Box w="15%" bg="blue.200">
+        <Sidebar />
+      </Box>
       <FormControl w="85%">
         <VStack p="2rem 1rem" w="60%" m="auto" align="left" gap="15px">
           <Flex gap="20px" align="center" justify="left">

@@ -25,6 +25,7 @@ import {
 } from "./functions";
 import { useNavigate } from "react-router-dom";
 import { editSingleProjectAPI } from "./functions";
+import Sidebar from "../Sidebar";
 
 const ClientList = () => {
   const [clients, setClients] = useState([]);
@@ -80,8 +81,10 @@ const ClientList = () => {
 
   return (
     <Flex>
-      <Box w="15%" h="100vh" bg="blue.200"></Box>
-      <Box w="85%" h="100vh">
+      <Box w="15%" bg="blue.200">
+        <Sidebar />
+      </Box>
+      <Box m="auto" w="80%" h="100vh">
         <VStack p="1rem 2rem">
           <Flex align="center" w="100%" justify="space-between">
             <Flex gap="20px" align="center">
