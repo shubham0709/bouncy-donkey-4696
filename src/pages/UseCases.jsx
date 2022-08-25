@@ -2,11 +2,14 @@ import React from "react";
 import { Box, Button, Grid, Text } from "@chakra-ui/react";
 import UcGridbox from "./UcGridbox";
 import UcReviews from "./UcReviews";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const UseCases = () => {
   return (
     <div>
       {/* banner  */}
+      <Navbar />
       <div>
         <Text
           mt="70px"
@@ -69,6 +72,7 @@ const UseCases = () => {
 
         <UcReviews />
       </Box>
+      <Footer />
     </div>
   );
 };
