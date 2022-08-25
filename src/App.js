@@ -6,6 +6,7 @@ import HowItWorks from "./pages/HowItWorks";
 import UseCases from "./pages/UseCases";
 import Project from "./pages/project/Project";
 import AddProject from "./pages/project/AddProject";
+import EditProject from "./pages/project/EditProject";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/usecases" element={<UseCases />} />
         <Route path="/project" element={<Project />} />
         <Route path="/newproject" element={<AddProject />} />
+        <Route path="/project/:id/edit" element={<EditProject />} />
       </Routes>
     </Box>
   );
