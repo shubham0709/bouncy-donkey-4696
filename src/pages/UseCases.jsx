@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Button, Grid, Text } from "@chakra-ui/react";
 import UcGridbox from "./UcGridbox";
+import UcReviews from "./UcReviews";
 
 const UseCases = () => {
   return (
@@ -65,6 +66,8 @@ const UseCases = () => {
         <Grid templateColumns="repeat(3, 1fr)" gap={5}>
           <UcGridbox />
         </Grid>
+
+        <UcReviews />
       </Box>
     </div>
   );
