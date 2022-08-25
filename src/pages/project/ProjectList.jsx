@@ -26,6 +26,7 @@ import { ImCheckmark, ImStack } from "react-icons/im";
 import { getProjectsAPI, deleteSingleProjectAPI } from "./functions";
 import { useNavigate } from "react-router-dom";
 import { editSingleProjectAPI } from "./functions";
+import Sidebar from "../Sidebar";
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
@@ -83,8 +84,10 @@ const ProjectList = () => {
 
   return (
     <Flex>
-      <Box w="15%" h="100vh" bg="blue.200"></Box>
-      <Box w="85%" h="100vh">
+      <Box w="15%" bg="blue.200">
+        <Sidebar />
+      </Box>
+      <Box w="80%" h="100vh" m="auto">
         <VStack p="1rem 2rem">
           <Flex align="center" w="100%" justify="space-between">
             <Flex gap="20px" align="center">
