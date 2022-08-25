@@ -14,7 +14,7 @@ import {
   Tr,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaQuestionCircle,
   FaArchive,
@@ -23,8 +23,64 @@ import {
 } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import { ImCheckmark, ImStack } from "react-icons/im";
+import { getProjectsAPI, deleteSingleProjectAPI } from "./functions";
+import { useNavigate } from "react-router-dom";
+import { editSingleProjectAPI } from "./functions";
 
 const ProjectList = () => {
+  const [projects, setProjects] = useState([]);
+  const navigate = useNavigate();
+  const getColor = (status) => {
+    switch (status) {
+      case "completed":
+        return "green.100";
+      case "progress":
+        return "yellow.100";
+      case "pending":
+        return "red.100";
+    }
+  };
+
+  const deleteHandler = (id) => {
+    deleteSingleProjectAPI(id)
+      .then((res) => {
+        console.log(res);
+        getProjectsAPI()
+          .then((res) => {
+            setProjects(res);
+          })
+          .then((err) => {
+            console.log(err);
+          });
+      })
+      .then((err) => console.log(err));
+    return;
+  };
+
+  const editHandler = (elem) => {
+    editSingleProjectAPI({ ...elem, status: "completed" })
+      .then((res) => {
+        console.log(res);
+        getProjectsAPI()
+          .then((res) => {
+            setProjects(res);
+            console.log(res);
+          })
+          .then((err) => {});
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    getProjectsAPI()
+      .then((res) => {
+        setProjects(res);
+        console.log(res);
+      })
+      .then((err) => {});
+  }, []);
+
   return (
     <Flex>
       <Box w="15%" h="100vh" bg="blue.200"></Box>
@@ -38,9 +94,14 @@ const ProjectList = () => {
               </Text>
             </Flex>
             <Box>
-              <Button bg="#3B8FC2" color="white">
+              <Button
+                bg="#3B8FC2"
+                color="white"
+                onClick={() => navigate("/newproject")}
+              >
                 <Flex align="center" gap="0.5rem">
-                  <Text fontSize="30px">+</Text>Add new project
+                  <Text fontSize="30px">+</Text>
+                  Add new project
                 </Flex>
               </Button>
             </Box>
@@ -88,9 +149,9 @@ const ProjectList = () => {
               <Table variant="simple">
                 <Thead>
                   <Tr>
-                    <Th>Name</Th>
+                    <Th>Project Name</Th>
                     <Th>Client</Th>
-                    <Th>Total hours</Th>
+                    <Th>Total Minutes</Th>
                     <Th>Billable Amount</Th>
                     <Th>Created</Th>
                     <Th>Status</Th>
@@ -98,33 +159,54 @@ const ProjectList = () => {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  <Tr>
-                    <Td color="#3B8FC2" fontSize="20px">
-                      inches
-                    </Td>
-                    <Td fontWeight="600" color="#989898">
-                      millimetres (mm)
-                    </Td>
-                    <Td fontWeight="600" color="#989898">
-                      25.4
-                    </Td>
-                    <Td fontWeight="600" color="#989898">
-                      inches
-                    </Td>
-                    <Td fontWeight="600" color="#989898">
-                      millimetres (mm)
-                    </Td>
-                    <Td fontWeight="600" color="#989898">
-                      25.4
-                    </Td>
-                    <Td fontWeight="600" color="#989898">
-                      <Flex gap="0.7rem" cursor="pointer">
-                        <FaEdit />
-                        <AiFillDelete />
-                        <ImCheckmark />
-                      </Flex>
-                    </Td>
-                  </Tr>
+                  {projects?.length > 0 &&
+                    projects.map((elem) => (
+                      <Tr bg={getColor(elem.status)}>
+                        <Td
+                          textDecoration="underline"
+                          color="#3B8FC2"
+                          cursor="pointer"
+                          fontSize="20px"
+                        >
+                          {elem.projectName}
+                        </Td>
+                        <Td fontWeight="600" color="#989898">
+                          {elem.client}
+                        </Td>
+                        <Td fontWeight="600" color="#989898">
+                          {Math.ceil(
+                            (Date.now() - new Date(elem.startDate)) /
+                              (1000 * 60)
+                          )}{" "}
+                          miniutes
+                        </Td>
+                        <Td fontWeight="600" color="#989898">
+                          {Math.ceil(
+                            (Date.now() - new Date(elem.startDate)) /
+                              (1000 * 60 * 60)
+                          ) * 109}
+                        </Td>
+                        <Td fontWeight="600" color="#989898">
+                          {elem.startDate.slice(0, 15)}
+                        </Td>
+                        <Td fontWeight="600" color="#989898">
+                          {elem.status}
+                        </Td>
+                        <Td fontWeight="600" color="#989898">
+                          <Flex gap="0.7rem" cursor="pointer">
+                            <FaEdit
+                              onClick={() => navigate(`${elem._id}/edit`)}
+                            />
+                            <AiFillDelete
+                              onClick={() => {
+                                deleteHandler(elem._id);
+                              }}
+                            />
+                            <ImCheckmark onClick={() => editHandler(elem)} />
+                          </Flex>
+                        </Td>
+                      </Tr>
+                    ))}
                 </Tbody>
               </Table>
             </TableContainer>

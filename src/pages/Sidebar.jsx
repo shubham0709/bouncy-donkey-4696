@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 import {
   IconButton,
   Avatar,
@@ -21,7 +21,7 @@ import {
   MenuDivider,
   MenuItem,
   MenuList,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import {
   FiHome,
   FiTrendingUp,
@@ -29,37 +29,38 @@ import {
   FiStar,
   FiSettings,
   FiMenu,
-  
   FiBell,
   FiChevronDown,
-} from 'react-icons/fi';
-import {MdAlarmAdd,MdRedeem,MdStackedBarChart,MdChatBubbleOutline,MdOutlinePeopleAlt } from "react-icons/md"
-import { IconType,TimeIcon, } from 'react-icons';
-import { ReactText } from 'react';
+} from "react-icons/fi";
+import {
+  MdAlarmAdd,
+  MdRedeem,
+  MdStackedBarChart,
+  MdChatBubbleOutline,
+  MdOutlinePeopleAlt,
+} from "react-icons/md";
+import { IconType, TimeIcon } from "react-icons";
+import { ReactText } from "react";
 
 interface LinkItemProps {
   name: string;
   icon: IconType;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Task', icon: MdAlarmAdd },
-  { name: 'Project', icon: MdRedeem },
-  { name: 'Reports', icon: MdStackedBarChart },
-  { name: 'Clients', icon: MdChatBubbleOutline },
-  { name: 'Team', icon: MdOutlinePeopleAlt },
+  { name: "Task", icon: MdAlarmAdd },
+  { name: "Project", icon: MdRedeem },
+  { name: "Reports", icon: MdStackedBarChart },
+  { name: "Clients", icon: MdChatBubbleOutline },
+  { name: "Team", icon: MdOutlinePeopleAlt },
 ];
 
-export default function Sidebar({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function Sidebar({ children }: { children: ReactNode }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
+    <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
       <SidebarContent
         onClose={() => onClose}
-        display={{ base: 'none', md: 'block' }}
+        display={{ base: "none", md: "block" }}
       />
       <Drawer
         autoFocus={false}
@@ -68,7 +69,8 @@ export default function Sidebar({
         onClose={onClose}
         returnFocusOnClose={false}
         onOverlayClick={onClose}
-        size="full">
+        size="full"
+      >
         <DrawerContent>
           <SidebarContent onClose={onClose} />
         </DrawerContent>
@@ -90,28 +92,26 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
       transition="3s ease"
-      bg={useColorModeValue('white', 'gray.900')}
+      bg={useColorModeValue("white", "gray.900")}
       borderRight="1px"
-      borderRightColor={useColorModeValue('gray.200', 'gray.700')}
-      w={{ base: 'full', md: 60 }}
+      borderRightColor={useColorModeValue("gray.200", "gray.700")}
+      w={{ base: "full", md: 60 }}
       pos="fixed"
       h="full"
-      {...rest}>
+      {...rest}
+    >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
         <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
           Logo
         </Text>
-        <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
+        <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
       </Flex>
-     
+
       {LinkItems.map((link) => (
-        
         <NavItem key={link.name} icon={link.icon}>
-        Task
+          Task
         </NavItem>
-        
       ))}
-      
     </Box>
   );
 };
@@ -122,7 +122,11 @@ interface NavItemProps extends FlexProps {
 }
 const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
   return (
-    <Link href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link
+      href="#"
+      style={{ textDecoration: "none" }}
+      _focus={{ boxShadow: "none" }}
+    >
       <Flex
         align="center"
         p="4"
@@ -131,16 +135,17 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: 'cyan.400',
-          color: 'white',
+          bg: "cyan.400",
+          color: "white",
         }}
-        {...rest}>
+        {...rest}
+      >
         {icon && (
           <Icon
             mr="4"
             fontSize="16"
             _groupHover={{
-              color: 'white',
+              color: "white",
             }}
             as={icon}
           />
@@ -161,13 +166,14 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       px={{ base: 4, md: 4 }}
       height="20"
       alignItems="center"
-      bg={useColorModeValue('white', 'gray.900')}
+      bg={useColorModeValue("white", "gray.900")}
       borderBottomWidth="1px"
-      borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
-      justifyContent={{ base: 'space-between', md: 'flex-end' }}
-      {...rest}>
+      borderBottomColor={useColorModeValue("gray.200", "gray.700")}
+      justifyContent={{ base: "space-between", md: "flex-end" }}
+      {...rest}
+    >
       <IconButton
-        display={{ base: 'flex', md: 'none' }}
+        display={{ base: "flex", md: "none" }}
         onClick={onOpen}
         variant="outline"
         aria-label="open menu"
@@ -175,14 +181,13 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       />
 
       <Text
-        display={{ base: 'flex', md: 'none' }}
+        display={{ base: "flex", md: "none" }}
         fontSize="2xl"
         fontFamily="monospace"
-        fontWeight="bold">
+        fontWeight="bold"
+      >
         Logo
       </Text>
-
-      
     </Flex>
   );
 };
