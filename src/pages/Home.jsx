@@ -1,17 +1,18 @@
 import { Box, Button, Flex, Grid, Image, Link, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import "./css/home.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { getProjectsAPI } from "./project/functions";
 
 const Home = () => {
   const state = useSelector((state) => state);
-  console.log(state);
+
   return (
     <>
       <Navbar />
-      <Box w="100%" m="auto">
+      <Box w="80%" m="auto">
         <Box w="100%" m="auto">
           <Text
             mt="100px"
@@ -499,8 +500,8 @@ const Home = () => {
             </Text>
           </Box>
         </Flex>
-        <Footer />
       </Box>
+      <Footer />
     </>
   );
 };
