@@ -11,13 +11,14 @@ import {
   FormControl,
   Alert,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaQuestionCircle } from "react-icons/fa";
-import { addProject } from "./functions";
+import { addProject, getClientsAPI } from "./functions";
 import { useNavigate } from "react-router-dom";
 
 const ProjectList = () => {
   const navigate = useNavigate();
+  const [clients, setClients] = useState([]);
   const [newProject, setNewProject] = useState({
     status: "progress",
   });
@@ -41,6 +42,16 @@ const ProjectList = () => {
     navigate("/project");
     return;
   };
+
+  useEffect(() => {
+    getClientsAPI()
+      .then((res) => {
+        setClients(res);
+        console.log(res);
+      })
+      .then((err) => {});
+  }, []);
+
   return (
     <Flex>
       <Box w="15%" bg="blue.200"></Box>
@@ -76,9 +87,10 @@ const ProjectList = () => {
               onChange={changeHandler}
               isRequired
             >
-              <option value="masai">masai</option>
-              <option value="scalar">scalar</option>
-              <option value="newton">newton</option>
+              {clients?.length &&
+                clients.map((elem) => (
+                  <option value={elem.clientName}>{elem.clientName}</option>
+                ))}
             </Select>
           </Box>
           <Flex direction="column" justify="left" w="100%">

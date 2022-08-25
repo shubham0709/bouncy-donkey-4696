@@ -161,7 +161,7 @@ const ProjectList = () => {
                 <Tbody>
                   {projects?.length > 0 &&
                     projects.map((elem) => (
-                      <Tr bg={getColor(elem.status)}>
+                      <Tr key={elem._id} bg={getColor(elem.status)}>
                         <Td
                           textDecoration="underline"
                           color="#3B8FC2"
@@ -178,7 +178,7 @@ const ProjectList = () => {
                             (Date.now() - new Date(elem.startDate)) /
                               (1000 * 60)
                           )}{" "}
-                          miniutes
+                          minutes
                         </Td>
                         <Td fontWeight="600" color="#989898">
                           {Math.ceil(

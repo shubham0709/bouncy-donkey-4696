@@ -31,7 +31,7 @@ const Home = () => {
           <strong>All-in-one free time tracking software.</strong>
         </Text>
         <Button id="btn1">
-          <a href="signup.html">Get Started - It's Free</a>
+          <a href="#">Get Started - It's Free</a>
         </Button>
         <Box w="90%" m="auto" mt="40px">
           <Image
@@ -198,7 +198,7 @@ const Home = () => {
           <Box w="25%">
             <Text fontSize="30px">Billing</Text>
             <h3>We need to bill our clients with flexible hourly rates.</h3>
-            <a href="extra.html" id="a2">
+            <a href="#" id="a2">
               Here's how...
             </a>
           </Box>
@@ -207,14 +207,14 @@ const Home = () => {
             <h3>
               We would like to calculate the profitability of our projects.
             </h3>
-            <a href="extra.html" id="a2">
+            <a href="#" id="a2">
               Here's how...
             </a>
           </Box>
           <Box w="25%">
             <Text fontSize="30px">Time tracking</Text>
             <h3>We want to track time on projects and tasks.</h3>
-            <a href="extra.html" id="a2">
+            <a href="#" id="a2">
               Here's how...
             </a>
           </Box>
@@ -230,20 +230,20 @@ const Home = () => {
           <Box w="25%">
             <Text fontSize="30px">Attedance</Text>
             <h3>We need to track employee attendance/absence and tasks.</h3>
-            <a href="extra.html" id="a2">
+            <a href="#" id="a2">
               Here's how...
             </a>
           </Box>
           <Box w="25%">
             <Text fontSize="30px">Client Reporting</Text>
             <h3>I need to report the time spent to clients or invoice them.</h3>
-            <a href="extra.html" id="a2">
+            <a href="#" id="a2">
               Here's how...
             </a>
           </Box>
           <Box w="25%">
             <Text fontSize="20px" style={{ marginTop: 60 }}>
-              <a href="extra.html" id="a3">
+              <a href="#" id="a3">
                 Find more use cases
               </a>{" "}
               →
@@ -409,7 +409,7 @@ const Home = () => {
           </Box>
         </Grid>
         <Text color="#2775a9" fontSize="27" mb="100" mt="5rem">
-          <a href="/my hours/review.html" id="a3">
+          <a href="#" id="a3">
             Read more reviews
           </a>{" "}
           →
@@ -422,25 +422,13 @@ const Home = () => {
           </Text>
         </Box>
         <Box mt="2rem" mb="100" id="block 8">
-          <a
-            href="supportpage.html"
-            id="a3"
-            style={{ marginRight: 20, fontWeight: "bold" }}
-          >
+          <a href="#" id="a3" style={{ marginRight: 20, fontWeight: "bold" }}>
             ✓ EMAIL &amp; LIVE CHAT
           </a>
-          <a
-            href="supportpage.html"
-            id="a3"
-            style={{ marginRight: 20, fontWeight: "bold" }}
-          >
+          <a href="#" id="a3" style={{ marginRight: 20, fontWeight: "bold" }}>
             ✓ TRAINING FOR TEAMS
           </a>
-          <a
-            href="supportpage.html"
-            id="a3"
-            style={{ marginRight: 20, fontWeight: "bold" }}
-          >
+          <a href="#" id="a3" style={{ marginRight: 20, fontWeight: "bold" }}>
             ✓ KNOWLEDGE BASE
           </a>
         </Box>

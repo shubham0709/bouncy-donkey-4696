@@ -7,6 +7,8 @@ import UseCases from "./pages/UseCases";
 import Project from "./pages/project/Project";
 import AddProject from "./pages/project/AddProject";
 import EditProject from "./pages/project/EditProject";
+import ClientList from "./pages/project/ClientList";
+import AddClient from "./pages/project/AddClient";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/project" element={<Project />} />
         <Route path="/newproject" element={<AddProject />} />
         <Route path="/project/:id/edit" element={<EditProject />} />
+        <Route path="/client" element={<ClientList />} />
+        <Route path="/newclient" element={<AddClient />} />
       </Routes>
     </Box>
   );
