@@ -14,12 +14,17 @@ import {
 import React, { useState, useEffect } from "react";
 import { FaQuestionCircle } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
-import { getSingleProjectAPI, editSingleProjectAPI } from "./functions";
+import {
+  getSingleProjectAPI,
+  editSingleProjectAPI,
+  getClientsAPI,
+} from "./functions";
 
 const EditProject = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [updateProject, setUpdateProject] = useState({});
+  const [clients, setClients] = useState({});
   const changeHandler = (e) => {
     let { name, value } = e.target;
     setUpdateProject({
@@ -47,6 +52,15 @@ const EditProject = () => {
       .then((err) => {
         console.log(err);
       });
+  }, []);
+
+  useEffect(() => {
+    getClientsAPI()
+      .then((res) => {
+        setClients(res);
+        console.log(res);
+      })
+      .then((err) => {});
   }, []);
 
   return (
@@ -86,9 +100,10 @@ const EditProject = () => {
               isRequired
               value={updateProject.client}
             >
-              <option value="masai">masai</option>
-              <option value="scalar">scalar</option>
-              <option value="newton">newton</option>
+              {clients?.length &&
+                clients.map((elem) => (
+                  <option value={elem.clientName}>{elem.clientName}</option>
+                ))}
             </Select>
           </Box>
           <Box align="left">
