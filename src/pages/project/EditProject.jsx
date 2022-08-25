@@ -11,36 +11,44 @@ import {
   FormControl,
   Alert,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaQuestionCircle } from "react-icons/fa";
-import { addProject } from "./functions";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { getSingleProjectAPI, editSingleProjectAPI } from "./functions";
 
-const ProjectList = () => {
+const EditProject = () => {
   const navigate = useNavigate();
-  const [newProject, setNewProject] = useState({
-    status: "progress",
-  });
+  const { id } = useParams();
+  const [updateProject, setUpdateProject] = useState({});
   const changeHandler = (e) => {
     let { name, value } = e.target;
-    setNewProject({
-      ...newProject,
+    setUpdateProject({
+      ...updateProject,
       [name]: value,
     });
   };
-  const addProjectHandler = async () => {
-    if (
-      !newProject.projectName ||
-      !newProject.client ||
-      !newProject.description
-    ) {
-      alert("please fill all details");
-      return;
-    }
-    await addProject(newProject);
-    navigate("/project");
-    return;
+  const editProjectHandler = async () => {
+    editSingleProjectAPI(updateProject)
+      .then((res) => {
+        console.log(res);
+        navigate("/project");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
+
+  useEffect(() => {
+    getSingleProjectAPI(id)
+      .then((res) => {
+        console.log("from edit page", res);
+        setUpdateProject(res);
+      })
+      .then((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <Flex>
       <Box w="15%" bg="blue.200"></Box>
@@ -48,7 +56,7 @@ const ProjectList = () => {
         <VStack p="2rem 1rem" w="60%" m="auto" align="left" gap="15px">
           <Flex gap="20px" align="center" justify="left">
             <Text fontSize="40px" fontWeight="500">
-              Add Project
+              Edit Project
             </Text>
             <Text fontSize="20px">
               <FaQuestionCircle />
@@ -59,6 +67,7 @@ const ProjectList = () => {
               NAME
             </Text>
             <Input
+              value={updateProject.projectName || ""}
               isRequired
               name="projectName"
               onChange={changeHandler}
@@ -75,10 +84,26 @@ const ProjectList = () => {
               bg="gray.50"
               onChange={changeHandler}
               isRequired
+              value={updateProject.client}
             >
               <option value="masai">masai</option>
               <option value="scalar">scalar</option>
               <option value="newton">newton</option>
+            </Select>
+          </Box>
+          <Box align="left">
+            <Text color="gray.500">STATUS</Text>
+            <Select
+              name="status"
+              placeholder="Select..."
+              bg="gray.50"
+              onChange={changeHandler}
+              isRequired
+              value={updateProject.status}
+            >
+              <option value="pending">pending</option>
+              <option value="progress">progress</option>
+              <option value="completed">completed</option>
             </Select>
           </Box>
           <Flex direction="column" justify="left" w="100%">
@@ -86,6 +111,7 @@ const ProjectList = () => {
               DESCRIPTION
             </Text>
             <Textarea
+              value={updateProject.description || ""}
               isRequired
               name="description"
               onChange={changeHandler}
@@ -148,15 +174,15 @@ const ProjectList = () => {
           <Flex justify="space-between">
             <Button
               type="submit"
-              onClick={() => addProjectHandler()}
+              onClick={() => editProjectHandler()}
               bg="#3B8FC2"
               color="white"
             >
-              Create project
+              Edit project
             </Button>
             <Link
               textDecoration="underline"
-              href="/project"
+              onClick={() => navigate("/project")}
               color="#3B8FC2"
               fontSize="20px"
             >
@@ -169,4 +195,4 @@ const ProjectList = () => {
   );
 };
 
-export default ProjectList;
+export default EditProject;

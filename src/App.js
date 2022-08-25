@@ -6,12 +6,19 @@ import HowItWorks from "./pages/HowItWorks";
 import UseCases from "./pages/UseCases";
 import Project from "./pages/project/Project";
 import AddProject from "./pages/project/AddProject";
-import Sidebar from './pages/Sidebar'
+import EditProject from "./pages/project/EditProject";
 
 function App() {
   return (
     <Box align="center">
-      <Sidebar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/howitworks" element={<HowItWorks />} />
+        <Route path="/usecases" element={<UseCases />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/newproject" element={<AddProject />} />
+        <Route path="/project/:id/edit" element={<EditProject />} />
+      </Routes>
     </Box>
   );
 }

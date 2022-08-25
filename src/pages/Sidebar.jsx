@@ -21,6 +21,7 @@ import {MdStackedBarChart,MdAlarm,MdOutlineCalendarToday,MdOutlineInput,MdOutlin
 import {BsFillGrid3X3GapFill} from 'react-icons/bs'
 import {AiOutlineBell} from 'react-icons/ai'
 import {CgProfile} from 'react-icons/cg'
+import {FiMenu} from 'react-icons/fi'
 
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
