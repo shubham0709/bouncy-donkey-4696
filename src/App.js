@@ -1,4 +1,9 @@
 import "./App.css";
+import Login from "./components/auth/Login";
+import SignUp from "./components/auth/SignUp";
+import SignUpPage2 from "./components/auth/SignUpPage2";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import { Box } from "@chakra-ui/react";
