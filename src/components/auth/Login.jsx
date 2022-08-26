@@ -1,15 +1,41 @@
 import React, { useRef } from "react";
 import "./login.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { loginAPI } from "../../Redux/Auth/auth.action";
+import { USER_LOGIN_SUCCESS } from "../../Redux/Auth/auth.actionTypes";
 
 const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { isLoading, isError, isAuth } = useSelector((state) => state.auth);
+  const token = localStorage.getItem("token");
+
   const handelLogin = (e) => {
     e.preventDefault();
     var email = emailRef.current.value;
     var password = passwordRef.current.value;
-    console.log(email, password);
+    if (email && password) {
+      const creds = {
+        email: email,
+        password: password,
+      };
+      dispatch(loginAPI(creds)).then((res) => {
+        if (res === USER_LOGIN_SUCCESS) {
+          alert("Login successful");
+          localStorage.setItem("isAuth", JSON.stringify(true));
+          navigate("/project");
+        } else {
+          alert("Login failed");
+        }
+      });
+    } else {
+      alert("Login Failed, Enter All Fields");
+    }
   };
 
   return (

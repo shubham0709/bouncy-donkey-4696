@@ -1,17 +1,35 @@
 import React, { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { registerAPI } from "../../Redux/Auth/auth.action";
+
 import "./signup.css";
 
 const SignUp = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const emailRef = useRef();
   const passwordRef = useRef();
   let usernameRef = useRef();
 
-  const handelSignup = (e) => {
+  const handelSignup = async (e) => {
     e.preventDefault();
     let email = emailRef.current.value;
     let password = passwordRef.current.value;
     let username = usernameRef.current.value;
-    console.log(email, password, username);
+    if (email && password) {
+      const payload = {
+        email: email,
+        password: password,
+      };
+      dispatch(registerAPI(payload))
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+      alert("Registration Successfull");
+      navigate("/login");
+    } else {
+      alert("Registration Failed, Enter All Fields");
+    }
   };
   return (
     <div className="signup">

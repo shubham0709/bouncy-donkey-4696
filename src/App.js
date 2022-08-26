@@ -27,6 +27,9 @@ function App() {
         <Route path="/project/:id/edit" element={<EditProject />} />
         <Route path="/client" element={<ClientList />} />
         <Route path="/newclient" element={<AddClient />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signupnext" element={<SignUpPage2 />} />
       </Routes>
     </Box>
   );
