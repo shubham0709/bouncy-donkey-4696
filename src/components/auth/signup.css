@@ -1,17 +1,17 @@
-.login {
+.signup {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.loginPage {
-  width: 650px;
+.signupPage {
+  width: 620px;
   height: 750px;
   margin-top: 100px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   /* border: 1px solid red; */
-  padding: 30px;
+  padding: 50px;
 }
 .signUpLogo {
   width: 30%;

@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./signupPage2.css";
 
 const SignUpPage2 = () => {
+  const companyNameRef = useRef();
+  const countryNameRef = useRef();
+  const mobileNoRef = useRef();
+
+  const handelSignupPage2 = (e) => {
+    e.preventDefault();
+    var companyName = companyNameRef.current.value;
+    var countryName = countryNameRef.current.value;
+    var mobileNo = mobileNoRef.current.value;
+    console.log(companyName, countryName, mobileNo);
+  };
   return (
     <div className="signupPage2">
       <div className="signupPage2Div">
@@ -23,6 +34,7 @@ const SignUpPage2 = () => {
               className="signupFullnameInput"
               autoFocus
               placeholder="COMPANY NAME"
+              ref={companyNameRef}
             />
             <span className="signupEmail">EMAIL</span>
             <span className="emailDisc">
@@ -34,6 +46,7 @@ const SignUpPage2 = () => {
               placeholder="COUNTRY"
               className="signupEmailInput"
               autoFocus
+              ref={countryNameRef}
             />
 
             <span className="signupPassword">MOBILE NUMBER (OPTIONAL)</span>
@@ -43,10 +56,13 @@ const SignUpPage2 = () => {
               name=""
               placeholder="MOBILE NUMBER"
               className="signupPasswordInput"
+              ref={mobileNoRef}
             />
 
             <div className="signupDiv">
-              <div className="signupBtn">Create New Company</div>
+              <div className="signupBtn" onClick={handelSignupPage2}>
+                Create New Company
+              </div>
             </div>
             <div className="backPage2"> Back </div>
           </form>

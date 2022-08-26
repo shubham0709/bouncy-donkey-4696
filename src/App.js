@@ -13,7 +13,7 @@ function App() {
       <Home></Home>
       <Footer /> */}
       {/* <Login /> */}
-      {/* <SignUp /> */}
+      <SignUp />
       {/* <SignUpPage2 /> */}
     </div>
   );

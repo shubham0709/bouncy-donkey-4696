@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./login.css";
 
 const Login = () => {
+  const emailRef = useRef();
+  const passwordRef = useRef();
+
+  const handelLogin = (e) => {
+    e.preventDefault();
+    var email = emailRef.current.value;
+    var password = passwordRef.current.value;
+    console.log(email, password);
+  };
+
   return (
     <div className="login">
       <div className="loginPage">
@@ -22,6 +32,7 @@ const Login = () => {
               placeholder="Email"
               className="emailInput"
               autoFocus
+              ref={emailRef}
             />
             <span className="password">PASSWORD</span>
             <input
@@ -30,9 +41,12 @@ const Login = () => {
               name=""
               placeholder="Password"
               className="passwordInput"
+              ref={passwordRef}
             />
             <div className="signInDiv">
-              <div className="signInBtn">Sign in</div>
+              <div className="signInBtn" onClick={handelLogin}>
+                Sign in
+              </div>
               <div>Reset Passsword</div>
             </div>
           </form>

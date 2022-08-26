@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./signup.css";
 
 const SignUp = () => {
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  let usernameRef = useRef();
+
+  const handelSignup = (e) => {
+    e.preventDefault();
+    let email = emailRef.current.value;
+    let password = passwordRef.current.value;
+    let username = usernameRef.current.value;
+    console.log(email, password, username);
+  };
   return (
-    <div className="login">
-      <div className="loginPage">
+    <div className="signup">
+      <div className="signupPage">
         <div className="signUpLogo">
           <img
             src="https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fd37c83dfa3ccb0d2d9836f_myhours-logo.svg"
@@ -25,6 +36,7 @@ const SignUp = () => {
               className="signupFullnameInput"
               autoFocus
               placeholder="Fullname"
+              ref={usernameRef}
             />
             <span className="signupEmail">EMAIL</span>
             <span className="emailDisc">You will use this email to login</span>
@@ -34,6 +46,7 @@ const SignUp = () => {
               placeholder="Email"
               className="signupEmailInput"
               autoFocus
+              ref={emailRef}
             />
             <span className="signupPassword">PASSWORD</span>
             <input
@@ -42,13 +55,16 @@ const SignUp = () => {
               name=""
               placeholder="Password"
               className="signupPasswordInput"
+              ref={passwordRef}
             />
             <div className="signupLink">
               By signing up you agree to the <span> Terms of Use</span>
             </div>
 
             <div className="signupDiv">
-              <div className="signupBtn">NEXT</div>
+              <div className="signupBtn" onClick={handelSignup}>
+                NEXT
+              </div>
             </div>
           </form>
         </div>
