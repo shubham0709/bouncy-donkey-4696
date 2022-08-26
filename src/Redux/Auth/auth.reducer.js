@@ -5,7 +5,7 @@ const initialState = {
   isLoading: false,
   isError: false,
   isAuth: initialAuthStatus,
-  token: "",
+  token: localStorage.getItem("token") || ""
 };
 
 export const authReducer = (state = initialState, { type, payload }) => {

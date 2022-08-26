@@ -10,7 +10,6 @@ export const registerAPI = (creds) => (dispatch) => {
 };
 
 export const loginAPI = (creds) => (dispatch) => {
-
   dispatch({ type: types.USER_LOGIN_REQUEST });
   return axios
     .post("http://localhost:7000/user/login", creds)
