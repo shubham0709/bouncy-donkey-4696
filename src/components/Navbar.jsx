@@ -18,8 +18,6 @@ const Navbar = () => {
         />{" "}
       </div>
       <div className="rightDiv">
-        <span>How it works</span>
-        <span>Use cases</span>
         <span onClick={() => navigate("/howitworks")}>How it works</span>
         <span onClick={() => navigate("/usecases")}>Use cases</span>
         <span>Pricing</span>
