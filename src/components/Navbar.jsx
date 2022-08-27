@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="rightDiv">
         <span onClick={() => navigate("/howitworks")}>How it works</span>
         <span onClick={() => navigate("/usecases")}>Use cases</span>
-        <span>Pricing</span>
+        <span onClick={() => navigate("/price")}>Pricing</span>
         <span>Support</span>
         <span onClick={() => navigate("/login")}>Sign in</span>
         <button className="navbarBtn">Get My Hours Free</button>
