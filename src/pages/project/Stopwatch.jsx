@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import "./Stopwatch.css";
 import Timer from "../project/Timer";
 import ControlButtons from "../project/Controlbutton";
 import { Box } from "@chakra-ui/react";
-  
+
 function StopWatch() {
   const [isActive, setIsActive] = useState(false);
   const [isPaused, setIsPaused] = useState(true);
   const [time, setTime] = useState(0);
-  
+
   React.useEffect(() => {
     let interval = null;
-  
+
     if (isActive && isPaused === false) {
       interval = setInterval(() => {
         setTime((time) => time + 10);
@@ -23,24 +22,24 @@ function StopWatch() {
       clearInterval(interval);
     };
   }, [isActive, isPaused]);
-  
+
   const handleStart = () => {
     setIsActive(true);
     setIsPaused(false);
   };
-  
+
   const handlePauseResume = () => {
     setIsPaused(!isPaused);
   };
-  
+
   const handleReset = () => {
     setIsActive(false);
     setTime(0);
   };
-  
+
   return (
-    <Box display='flex' gap='6'>
-    <ControlButtons
+    <Box display="flex" gap="6">
+      <ControlButtons
         active={isActive}
         isPaused={isPaused}
         handleStart={handleStart}
@@ -48,9 +47,8 @@ function StopWatch() {
         handleReset={handleReset}
       />
       <Timer time={time} />
-      
     </Box>
   );
 }
-  
+
 export default StopWatch;
