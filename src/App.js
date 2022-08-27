@@ -14,6 +14,7 @@ import AddProject from "./pages/project/AddProject";
 import EditProject from "./pages/project/EditProject";
 import ClientList from "./pages/project/ClientList";
 import AddClient from "./pages/project/AddClient";
+import Pricepage from "./pages/Pricepage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signupnext" element={<SignUpPage2 />} />
+        <Route path="/price" element={<Pricepage />} />
       </Routes>
     </Box>
   );
