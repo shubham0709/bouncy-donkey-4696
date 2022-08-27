@@ -14,6 +14,9 @@ import AddProject from "./pages/project/AddProject";
 import EditProject from "./pages/project/EditProject";
 import ClientList from "./pages/project/ClientList";
 import AddClient from "./pages/project/AddClient";
+import Track from "./pages/project/Track";
+
+import StopWatch from "./pages/project/Stopwatch";
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signupnext" element={<SignUpPage2 />} />
+        <Route path="/track" element={<Track/>} />
+        <Route path="/track1" element={<StopWatch/>} />
+
       </Routes>
     </Box>
   );
