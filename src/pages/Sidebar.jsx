@@ -97,6 +97,12 @@ const SidebarContent = ({ onClose, ...rest }) => {
     navigate("/project");
   };
 
+  const getName = () => {
+    let email = localStorage.getItem("email");
+
+    return email;
+  };
+
   return (
     <Box
       bg="gray.100"
@@ -322,8 +328,15 @@ const SidebarContent = ({ onClose, ...rest }) => {
         mt="6"
       >
         <CgProfile />
-        <Box flex="1" textAlign="justify" fontWeight="600" color="#375d75">
-          Profile
+        <Box
+          onClick={() => navigate("/profile")}
+          cursor="pointer"
+          flex="1"
+          textAlign="justify"
+          fontWeight="600"
+          color="#375d75"
+        >
+          {getName()}
         </Box>
       </HStack>
     </Box>

@@ -15,6 +15,11 @@ import AddClient from "./pages/project/AddClient";
 import Pricepage from "./pages/Pricepage";
 import Track from "./pages/project/Track";
 
+import Protected from "./hoc/Protected";
+import Logout from "./components/Logout";
+import Profilepage from "./pages/Profilepage";
+
+
 function App() {
   return (
     <Box align="center">
@@ -30,8 +35,11 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signupnext" element={<SignUpPage2 />} />
-        <Route path="/price" element={<Pricepage />} />
-        <Route path="/track" element={<Track />} />
+
+        <Route path="/price" element={<Protected><Pricepage /></Protected>} />
+        <Route path="/track" element={<Protected><Track /></Protected>} />
+        <Route path="/profile" element={<Protected><Profilepage /></Protected>} />
+
       </Routes>
     </Box>
   );

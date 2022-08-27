@@ -31,6 +31,8 @@ export const authReducer = (state = initialState, { type, payload }) => {
 
     case types.USER_LOGOUT: {
       localStorage.removeItem("token");
+      localStorage.removeItem("isAuth");
+      localStorage.removeItem("email");
       return initialState;
     }
 
