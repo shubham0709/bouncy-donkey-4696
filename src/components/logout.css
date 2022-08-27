@@ -1,0 +1,165 @@
+.logout {
+  /* background-color: red; */
+  width: 50%;
+  /* height: 100vh; */
+  margin: auto;
+  padding: 20px 50px;
+  padding-bottom: 50px;
+}
+.profileTitle {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.userInfo {
+  display: flex;
+  /* border: 1px solid red; */
+  /* margin: auto; */
+  justify-content: space-around;
+}
+
+.logoutFullname,
+.logoutEmail {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.logoutFullname > input,
+.logoutEmail > input {
+  width: 300px;
+  padding: 8px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.personalTitle,
+.snapshot {
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.working {
+  text-align: left;
+  margin: 20px 0;
+}
+.working > input {
+  margin-right: 5px;
+}
+
+.personalInfo {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  font-size: 14px;
+}
+
+.firstDay > input {
+  width: 300px;
+  padding: 8px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.workingHour > input,
+.workingHour2 > input {
+  width: 150px;
+  padding: 8px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.timeTracking {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.timeTracking > p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.timeTracking > div {
+  margin: 5px 0;
+}
+.timeTracking > div > input {
+  margin-right: 5px;
+}
+
+.step {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  /* border: 1px solid white; */
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.step > input {
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.step > span {
+  font-size: 13px;
+  text-align: left;
+}
+
+.snapshot {
+  display: flex;
+  flex-direction: column;
+}
+.snapshotCheckbox {
+  font-size: 16px;
+}
+.snapshotCheckbox > input {
+  margin-right: 15px;
+}
+
+.controlBtn {
+  width: 300px;
+  height: 50px;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  margin-right: auto;
+}
+.controlBtn > span {
+  /* border: 1px solid black; */
+  width: 30%;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.controlBtn > span:first-child {
+  background-color: rgb(37, 111, 196);
+}
+
+.controlBtn2 {
+  padding-top: 40px;
+  width: 300px;
+  height: 50px;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px 0;
+  margin-right: auto;
+}
+
+.signoutBtn {
+  border: 1px solid rgb(132, 28, 28);
+  width: 100px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.forgetBtn {
+  /* border: 1px solid rgb(132, 28, 28); */
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(225, 208, 208);
+  border-radius: 5px;
+}
