@@ -51,7 +51,6 @@ const UcGridbox = () => {
   ];
   return data.map((el) => (
     <Box
-      // boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
       boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
       borderRadius="20px"
       w="400px"
@@ -85,7 +84,7 @@ const UcGridbox = () => {
           >
             {el.heading}
           </Text>
-          <Text fontSize={"18px"} fontWeight={"600"} textAlign={"left"}>
+          <Text fontSize={"18px"} fontWeight={"500"} textAlign={"left"}>
             {el.paragraph}
           </Text>
         </Box>
