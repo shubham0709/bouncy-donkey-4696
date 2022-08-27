@@ -23,7 +23,6 @@ const Profilepage = () => {
           <div className="prfl_body_pad">
             <div className="body_content">
               <div className="profile">
-                {/* Profile */}
                 <h1 className="profile_text">Profile</h1>
                 <div className="name_email">
                   <div className="fname">
