@@ -79,7 +79,9 @@ const Login = () => {
           </form>
         </div>
         {/* lnk */}
-        <div className="signUpLink">New to My Hours? Sign up</div>
+        <div onClick={() => navigate("/signup")} className="signUpLink">
+          New to My Hours? Sign up
+        </div>
       </div>
     </div>
   );
