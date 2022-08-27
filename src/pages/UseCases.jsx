@@ -69,7 +69,6 @@ const UseCases = () => {
         <Grid templateColumns="repeat(3, 1fr)" gap={5}>
           <UcGridbox />
         </Grid>
-
         <UcReviews />
       </Box>
       <Footer />

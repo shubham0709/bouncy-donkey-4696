@@ -46,7 +46,7 @@ const UcGridbox = () => {
       img: "https://uploads-ssl.webflow.com/5c77a918ef19681741be7bca/5fd20dcf9d62a4f65fea8acd_Frame%2027(1)(1)-p-500.png",
       heading: "Timesheet time tracking",
       paragraph:
-        "Track time just as you are used to, but simpler Because you are tired of using unmanageable stacks of paper, excel templates, or complex apps week in week out.",
+        "Track time just as you are used to, but simpler Because you are tired of using unmanageable stacks of paper, excel templates, or complex apps week in week out.but simpler Because you are tired of using unmanageable stacks of paper, excel templates.",
     },
   ];
   return data.map((el) => (
@@ -54,9 +54,8 @@ const UcGridbox = () => {
       // boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
       boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px"
       borderRadius="20px"
-      w="400px"
+      w="100%"
       h={"-webkit-fit-content"}
-      padding={"3.5"}
       bg={el.bg ? el.bg : "#EFFCF3"}
       alignItems={"center"}
     >

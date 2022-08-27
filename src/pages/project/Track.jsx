@@ -41,7 +41,7 @@ const Track = () => {
         <Sidebar />
       </Box>
       <Box width="85%">
-        <VStack w="90%" gap="20px">
+        <VStack w="100%" gap="20px">
           <Flex
             align="center"
             justify="space-around"
@@ -84,10 +84,6 @@ const Track = () => {
             </Flex>
           </Flex>
           <Divider />
-          <Text align="left" w="70%" m="auto" color="gray.400">
-            No time tracked for this day.{" "}
-            <Link color="blue.400">start a new time log</Link>
-          </Text>
           <TrackList />
         </VStack>
       </Box>
