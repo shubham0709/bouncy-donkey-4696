@@ -148,7 +148,7 @@ const ClientList = () => {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  {clients?.length > 0 &&
+                  {clients?.length &&
                     clients.map((elem, i) => (
                       <Tr key={elem._id} bg={getColor(i)}>
                         <Td

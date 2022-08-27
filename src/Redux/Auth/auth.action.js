@@ -13,7 +13,7 @@ export const registerAPI = (creds) => (dispatch) => {
 export const loginAPI = (creds) => (dispatch) => {
   dispatch({ type: types.USER_LOGIN_REQUEST });
   return axios
-    .post("http://localhost:7000/user/login", creds)
+    .post("https://guarded-tundra-58795.herokuapp.com/user/login", creds)
     .then((res) => {
       localStorage.setItem("email", res.data.email);
       dispatch({ type: types.USER_LOGIN_SUCCESS, payload: res.data.token });

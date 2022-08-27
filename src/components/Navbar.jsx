@@ -22,7 +22,7 @@ const Navbar = () => {
         <span onClick={() => navigate("/usecases")}>Use cases</span>
         <span>Pricing</span>
         <span>Support</span>
-        <span onClick={() => navigate("/signup")}>Sign in</span>
+        <span onClick={() => navigate("/login")}>Sign in</span>
         <button className="navbarBtn">Get My Hours Free</button>
       </div>
     </div>
