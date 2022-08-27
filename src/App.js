@@ -15,6 +15,8 @@ import AddClient from "./pages/project/AddClient";
 import Pricepage from "./pages/Pricepage";
 import Track from "./pages/project/Track";
 import Protected from "./hoc/Protected";
+import Logout from "./components/Logout";
+import Profilepage from "./pages/Profilepage";
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
         <Route path="/signupnext" element={<SignUpPage2 />} />
         <Route path="/price" element={<Protected><Pricepage /></Protected>} />
         <Route path="/track" element={<Protected><Track /></Protected>} />
+        <Route path="/profile" element={<Protected><Profilepage /></Protected>} />
       </Routes>
     </Box>
   );

@@ -1,6 +1,7 @@
 import axios from "axios";
 import * as types from "./auth.actionTypes";
 
+
 export const registerAPI = (creds) => (dispatch) => {
   return axios
     .post("http://localhost:7000/user/register", creds)
@@ -14,6 +15,7 @@ export const loginAPI = (creds) => (dispatch) => {
   return axios
     .post("http://localhost:7000/user/login", creds)
     .then((res) => {
+      localStorage.setItem("email", res.data.email);
       dispatch({ type: types.USER_LOGIN_SUCCESS, payload: res.data.token });
       return types.USER_LOGIN_SUCCESS;
     })
@@ -23,5 +25,7 @@ export const loginAPI = (creds) => (dispatch) => {
 };
 
 export const logoutAPI = () => (dispatch) => {
+  localStorage.clear();
   dispatch({ type: types.USER_LOGOUT });
+  return true;
 };
