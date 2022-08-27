@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { useEffect } from "react";
 import {
   IconButton,
   Box,
@@ -41,13 +41,17 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
-interface LinkItemProps {
-  name: string;
-  icon: IconType;
-}
+// interface LinkItemProps {
+//   name: string;
+//   icon: IconType;
+// }
 
-export default function SimpleSidebar({ children }: { children: ReactNode }) {
+export default function SimpleSidebar({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  useEffect(() => {
+    onClose();
+  }, []);
+
   return (
     <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
       <SidebarContent
@@ -76,11 +80,11 @@ export default function SimpleSidebar({ children }: { children: ReactNode }) {
   );
 }
 
-interface SidebarProps extends BoxProps {
-  onClose: () => void;
-}
+// interface SidebarProps extends BoxProps {
+//   onClose: () => void;
+// }
 
-const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+const SidebarContent = ({ onClose, ...rest }) => {
   const navigate = useNavigate();
 
   const handleTrack = () => {
@@ -326,11 +330,11 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   );
 };
 
-interface NavItemProps extends FlexProps {
-  icon: IconType;
-  children: ReactText;
-}
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+// interface NavItemProps extends FlexProps {
+//   icon: IconType;
+//   children: ReactText;
+// }
+const NavItem = ({ icon, children, ...rest }) => {
   return (
     <Link
       href="#"
@@ -366,10 +370,10 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
   );
 };
 
-interface MobileProps extends FlexProps {
-  onOpen: () => void;
-}
-const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
+// interface MobileProps extends FlexProps {
+//   onOpen: () => void;
+// }
+const MobileNav = ({ onOpen, ...rest }) => {
   return (
     <Flex
       ml={{ base: 0, md: 60 }}
