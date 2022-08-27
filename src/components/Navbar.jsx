@@ -18,10 +18,6 @@ const Navbar = () => {
         />{" "}
       </div>
       <div className="rightDiv">
-<<<<<<< HEAD
-        
-=======
->>>>>>> 8fd6834535b8091a223540f071ce176e8bd0456d
         <span onClick={() => navigate("/howitworks")}>How it works</span>
         <span onClick={() => navigate("/usecases")}>Use cases</span>
         <span>Pricing</span>
