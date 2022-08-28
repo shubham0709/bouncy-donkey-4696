@@ -3,8 +3,9 @@ import * as types from "./auth.actionTypes";
 
 
 export const registerAPI = (creds) => (dispatch) => {
+
   return axios
-    .post("http://localhost:7000/user/register", creds)
+    .post("https://guarded-tundra-58795.herokuapp.com/user/register", creds)
     .then((res) => {
       dispatch({ type: types.USER_REGISTER });
     });
