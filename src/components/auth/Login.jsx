@@ -52,7 +52,9 @@ const Login = () => {
         {/* form  */}
         <div className="signInFormDiv">
           <form className="signInForm">
-            <span className="email">EMAIL</span>
+            <span className="email" style={{ textAlign: "left" }}>
+              EMAIL
+            </span>
             <input
               type="text"
               name=""
@@ -71,7 +73,11 @@ const Login = () => {
               ref={passwordRef}
             />
             <div className="signInDiv">
-              <div className="signInBtn" onClick={handelLogin}>
+              <div
+                className="signInBtn"
+                style={{ color: "white" }}
+                onClick={handelLogin}
+              >
                 Sign in
               </div>
               <div>Reset Passsword</div>
