@@ -15,11 +15,13 @@ const Footer = () => {
           {/* 1 */}
           <div className="footerList">
             <span className="footerListheading">Product</span>
-            <span>How it works</span>
+            <span onClick={() => navigate("/howitworks")}>How it works</span>
             <span>Features</span>
             <span>Mobile app</span>
-            <span>Use case collection</span>
-            <span>Pricing</span>
+            <span onClick={() => navigate("/usecases")}>
+              Use case collection
+            </span>
+            <span onClick={() => navigate("/price")}>Pricing</span>
             <span>Guides</span>
             <span>Customer Reviews</span>
             <span>Start Free</span>
