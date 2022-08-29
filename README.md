@@ -23,31 +23,22 @@ My Hours is a cloud-based time tracking solution best suited for small teams and
 
 ## 🚀 Features
 - Login/Signup User Account
-- Searching product with Debouncing feature 
-- Cart Add/Remove Items
-- Pop modal and Toast notification
-- Cart Update Quantities
-- Payment page which calculates the products prices dynamically.
-- Address Management
-- Order Summary
-- Coupons are provided for the discount
-- Responsive for every screen size.
-- Order details of all ordered item
+- User Profile Detail
+- Logout Account
+- List Of Client
+- Tract Project by checking completiton , pending , ongoing status 
+- tracking user project 
+- site information
+- timer with different project
+- attractive navbarand footer
 
 ## 🚀 Our Team Members:-
 
 
-- Ramesh [[LinkedIn Profile](https://www.linkedin.com/in/vishwaskumar99)]
-
-- Shriram [[LinkedIn Profile](https://www.linkedin.com/in/vishal-kumar-42261922b/)]
-
-- Sarbjot Singh [[LinkedIn Profile](https://www.linkedin.com/in/sarbjot-/)]
+- Prakash [[LinkedIn Profile](https://www.linkedin.com/in/prakash-gupta-pg/)]
 
 - shubham barore [[LinkedIn Profile](https://www.linkedin.com/in/shubham-barore-572738159)]
-
-- Pratik Mate [[LinkedIn Profile](https://www.linkedin.com/in/pratik-mate-a6a62919b)]
-
-- Thanigaivel Ambalavanan [[LinkedIn Profile](https://www.linkedin.com/in/thanigaivel-ambalavanan-3b4a30120/)]
+- 
 
 
 ## Screenshots
@@ -58,45 +49,61 @@ This is the main landing page of our website. Here clicking on any option on the
 
 This page is functional and responsive.
 
-![Homepage ](https://cdn-images-1.medium.com/max/1200/1*fK5Uknv65Fe4joghIJLvWg.png)
+![Homepage ](https://miro.medium.com/max/1400/1*PchcMs__zlMEZHLycGMwsA.png)
 
 #### Navigation bar -
 
-If the user clicks on the SignUp/login page it shows the pages of that section and also Searching of product with debouncing feature.
+If the user clicks on the SignUp/login page it shows the pages of that section .
 
-![Navigation bar](https://cdn-images-1.medium.com/max/1200/1*1bm-kD9lPa_cqTp8MXLMYw.png)
+![Navigation bar](https://miro.medium.com/max/1400/1*PchcMs__zlMEZHLycGMwsA.png)
+
+#### Footer -
+
+If the user clicks on the any tab it shows the pages of that section .
+
+![Footer](https://miro.medium.com/max/1400/1*B0rDayki8VqvyNzooTtFxg.png)
+
 
 #### Sign up / Sign in Page -
 
 On this page, you can register a user. If the user is already registered, you can simply sign in by providing valid details of the user.
 
-![Sign up](https://cdn-images-1.medium.com/max/1200/1*_dgmZ27CUl1pvx6vHEXbOQ.png)
+![Sign up](https://miro.medium.com/max/1400/1*LADiZ93oUELacG3UkUvYuQ.png)
 
 
-#### Products Page -
+![Sign up](https://miro.medium.com/max/1400/1*yIu3V5RX5FqrExi25eT-KQ.png)
 
-Here users can browse and add items to the cart by clicking on the Add to Cart button.
+#### Pricing Page -
 
-![Products Page](https://cdn-images-1.medium.com/max/1200/1*sPm7SSGhhcpODL2wGmDOWg.png)
+In pricing page, we provided two plans . Here user can benefits our both the plans and also exciting features
 
-#### Cart Page -
+![Pricing Page](https://miro.medium.com/max/1400/1*iX2o50KjmJoThqKlceHYCg.png)
 
-Here all the products added to the cart will be shown. On this page, you can also remove the items. By clicking on the “CHECKOUT” button you will be redirected to the checkout page.
+#### How it Work Page -
 
-![Cart](https://cdn-images-1.medium.com/max/1200/1*I5GnEEX-SwfiTxa1-JMHAA.png)
+In How it works page , we provided a video which shows how website works and you can go through it and read our instructions to how working our website.
 
-#### Payment Page -
+![How it Work Page](https://miro.medium.com/max/1400/1*iX2o50KjmJoThqKlceHYCg.png)
+
+
+#### Project Page -
+
+After login ,the user lands on the product page.
+
+Here we have provided the Tracking, Projects , Report , Clients , Team , Profile and helping section
+
+![Products Page](https://miro.medium.com/max/1400/1*bxjAFLMIY7dnd_3xSFIJ-Q.png)
+
+
+#### Profile Page With Logout -
 
 On this page, users can add their address details and add their payment details.
 
 By providing these details users can place orders by clicking the “PLACE ORDER” button.
 
-![Products Page](https://cdn-images-1.medium.com/max/720/1*m1DXB1dft_IgjBkWILQMYw.png)
-After Proceeding users get this screen-
+![Profile Page With Logout](https://cdn-images-1.medium.com/max/720/1*m1DXB1dft_IgjBkWILQMYw.png)
 
-![Products Page](https://cdn-images-1.medium.com/max/720/1*eD7G5CwFRHHogwwcloTdWQ.png)
-
-After Payment Success you will be redirected to the Home Page.
+After logout Success you will be redirected to the Home Page.
 
 
 
@@ -130,5 +137,5 @@ Start the local API server
 Start the live server from index.html or refer to deploy link
 
 ```bash
-  https://sarb908.github.io/Fraazo/
+https://github.com/shubham0709/bouncy-donkey-4696
 ``
