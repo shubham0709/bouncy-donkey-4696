@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+# “myhours.com” Website Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![Homepage ](https://miro.medium.com/max/1400/1*PchcMs__zlMEZHLycGMwsA.png)
+### MyHours is the online Free Time Tracking software with a track record .
 
-In the project directory, you can run:
+My Hours is a cloud-based time tracking solution best suited for small teams and freelancers. Users can start time tracking on unlimited projects and tasks in seconds, generate insightful reports, and create invoices.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies we used
+[![React](https://img.shields.io/badge/React_(17.0.2)-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-### `npm test`
+[![GPLv3 License](https://img.shields.io/badge/Redux_(4.1.2)-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://opensource.org/licenses/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![AGPL License](https://img.shields.io/badge/Chakra%20UI-3bc7bd?style=for-the-badge&logo=chakraui&logoColor=white)](http://www.gnu.org/licenses/agpl-3.0)
 
-### `npm run build`
+[![AGPL License](https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white)](http://www.gnu.org/licenses/agpl-3.0)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[![AGPL License](https://img.shields.io/badge/nodejs?style=for-the-badge&logo=nodejs&logoColor=white)](http://www.gnu.org/licenses/agpl-3.0)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[![AGPL License](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](http://www.gnu.org/licenses/agpl-3.0)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Features
+- Login/Signup User Account
+- Searching product with Debouncing feature 
+- Cart Add/Remove Items
+- Pop modal and Toast notification
+- Cart Update Quantities
+- Payment page which calculates the products prices dynamically.
+- Address Management
+- Order Summary
+- Coupons are provided for the discount
+- Responsive for every screen size.
+- Order details of all ordered item
 
-### `npm run eject`
+## 🚀 Our Team Members:-
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Ramesh [[LinkedIn Profile](https://www.linkedin.com/in/vishwaskumar99)]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Shriram [[LinkedIn Profile](https://www.linkedin.com/in/vishal-kumar-42261922b/)]
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Sarbjot Singh [[LinkedIn Profile](https://www.linkedin.com/in/sarbjot-/)]
 
-## Learn More
+- shubham barore [[LinkedIn Profile](https://www.linkedin.com/in/shubham-barore-572738159)]
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Pratik Mate [[LinkedIn Profile](https://www.linkedin.com/in/pratik-mate-a6a62919b)]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Thanigaivel Ambalavanan [[LinkedIn Profile](https://www.linkedin.com/in/thanigaivel-ambalavanan-3b4a30120/)]
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Screenshots
 
-### Analyzing the Bundle Size
+#### Homepage -
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This is the main landing page of our website. Here clicking on any option on the Navbar and Images will redirect the user to the respective Product Page.
 
-### Making a Progressive Web App
+This page is functional and responsive.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Homepage ](https://cdn-images-1.medium.com/max/1200/1*fK5Uknv65Fe4joghIJLvWg.png)
 
-### Advanced Configuration
+#### Navigation bar -
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+If the user clicks on the SignUp/login page it shows the pages of that section and also Searching of product with debouncing feature.
 
-### Deployment
+![Navigation bar](https://cdn-images-1.medium.com/max/1200/1*1bm-kD9lPa_cqTp8MXLMYw.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Sign up / Sign in Page -
 
-### `npm run build` fails to minify
+On this page, you can register a user. If the user is already registered, you can simply sign in by providing valid details of the user.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Sign up](https://cdn-images-1.medium.com/max/1200/1*_dgmZ27CUl1pvx6vHEXbOQ.png)
+
+
+#### Products Page -
+
+Here users can browse and add items to the cart by clicking on the Add to Cart button.
+
+![Products Page](https://cdn-images-1.medium.com/max/1200/1*sPm7SSGhhcpODL2wGmDOWg.png)
+
+#### Cart Page -
+
+Here all the products added to the cart will be shown. On this page, you can also remove the items. By clicking on the “CHECKOUT” button you will be redirected to the checkout page.
+
+![Cart](https://cdn-images-1.medium.com/max/1200/1*I5GnEEX-SwfiTxa1-JMHAA.png)
+
+#### Payment Page -
+
+On this page, users can add their address details and add their payment details.
+
+By providing these details users can place orders by clicking the “PLACE ORDER” button.
+
+![Products Page](https://cdn-images-1.medium.com/max/720/1*m1DXB1dft_IgjBkWILQMYw.png)
+After Proceeding users get this screen-
+
+![Products Page](https://cdn-images-1.medium.com/max/720/1*eD7G5CwFRHHogwwcloTdWQ.png)
+
+After Payment Success you will be redirected to the Home Page.
+
+
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the local API server
+
+```bash
+  json-server --watch data.json --port 8080
+```
+
+Start the live server from index.html or refer to deploy link
+
+```bash
+  https://sarb908.github.io/Fraazo/
+``
