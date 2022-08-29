@@ -17,8 +17,6 @@ My Hours is a cloud-based time tracking solution best suited for small teams and
 
 [![AGPL License](https://img.shields.io/badge/Rest_API-02303A?style=for-the-badge&logo=react-router&logoColor=white)](http://www.gnu.org/licenses/agpl-3.0)
 
-[![AGPL License](https://img.shields.io/badge/nodejs?style=for-the-badge&logo=nodejs&logoColor=white)](http://www.gnu.org/licenses/agpl-3.0)
-
 [![AGPL License](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](http://www.gnu.org/licenses/agpl-3.0)
 
 ## 🚀 Features
@@ -36,9 +34,10 @@ My Hours is a cloud-based time tracking solution best suited for small teams and
 
 
 - Prakash [[LinkedIn Profile](https://www.linkedin.com/in/prakash-gupta-pg/)]
-
 - shubham barore [[LinkedIn Profile](https://www.linkedin.com/in/shubham-barore-572738159)]
-- 
+- shradha-mishra [[LinkedIn Profile](https://www.linkedin.com/in/shradha-mishra-3b967914b)]
+- Pavan-kadam [[LinkedIn Profile]()] 
+- Sambit-kumar [[LinkedIn Profile]()]
 
 
 ## Screenshots
@@ -101,7 +100,7 @@ On this page, users can add their address details and add their payment details.
 
 By providing these details users can place orders by clicking the “PLACE ORDER” button.
 
-![Profile Page With Logout](https://cdn-images-1.medium.com/max/720/1*m1DXB1dft_IgjBkWILQMYw.png)
+![Profile Page With Logout](https://drive.google.com/file/d/1VZdaJVGuk4ghVZBxq_Fauow_wrr-837T/view?usp=sharing)
 
 After logout Success you will be redirected to the Home Page.
 
@@ -138,4 +137,3 @@ Start the live server from index.html or refer to deploy link
 
 ```bash
 https://github.com/shubham0709/bouncy-donkey-4696
-``
