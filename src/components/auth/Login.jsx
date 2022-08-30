@@ -12,30 +12,28 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { isLoading, isError, isAuth } = useSelector((state) => state.auth);
-  const token = localStorage.getItem("token");
-
   const handelLogin = (e) => {
     e.preventDefault();
     var email = emailRef.current.value;
     var password = passwordRef.current.value;
-    if (email && password) {
-      const creds = {
-        email: email,
-        password: password,
-      };
-      dispatch(loginAPI(creds)).then((res) => {
-        if (res === USER_LOGIN_SUCCESS) {
-          alert("Login successful");
-          localStorage.setItem("isAuth", JSON.stringify(true));
-          navigate("/project");
-        } else {
-          alert("Login failed");
-        }
-      });
-    } else {
-      alert("Login Failed, Enter All Fields");
-    }
+    // if (email.length && password.length) {
+    // } else {
+    //   alert("Login Failed, Enter All Fields");
+    // }
+    const creds = {
+      email: email,
+      password: password,
+    };
+    dispatch(loginAPI(creds)).then((res) => {
+      console.log(res);
+      if (res === USER_LOGIN_SUCCESS) {
+        alert("Login successful");
+        localStorage.setItem("isAuth", JSON.stringify(true));
+        navigate("/project");
+      } else {
+        alert("Login failed");
+      }
+    });
   };
 
   return (
