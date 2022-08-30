@@ -18,7 +18,6 @@ export const loginAPI = (creds) => (dispatch) => {
     .then((res) => {
       localStorage.setItem("email", res.data.email);
       dispatch({ type: types.USER_LOGIN_SUCCESS, payload: res.data.token });
-      return types.USER_LOGIN_SUCCESS;
     })
     .catch((err) => {
       dispatch({ type: types.USER_LOGIN_FAILED, payload: err });

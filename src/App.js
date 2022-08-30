@@ -27,11 +27,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/howitworks" element={<HowItWorks />} />
         <Route path="/usecases" element={<UseCases />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/newproject" element={<AddProject />} />
-        <Route path="/project/:id/edit" element={<EditProject />} />
-        <Route path="/client" element={<ClientList />} />
-        <Route path="/newclient" element={<AddClient />} />
+        <Route path="/project" element={<Protected><Project /></Protected>} />
+        <Route path="/newproject" element={<Protected><AddProject /></Protected>} />
+        <Route path="/project/:id/edit" element={<Protected><EditProject /></Protected>} />
+        <Route path="/client" element={<Protected><ClientList /></Protected>} />
+        <Route path="/newclient" element={<Protected><AddClient /></Protected>} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signupnext" element={<SignUpPage2 />} />

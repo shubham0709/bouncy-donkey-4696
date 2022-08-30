@@ -28,7 +28,6 @@ const Login = () => {
         if (res === USER_LOGIN_SUCCESS) {
           alert("Login successful");
           localStorage.setItem("isAuth", JSON.stringify(true));
-
           navigate("/project");
         } else {
           alert("Login failed");
