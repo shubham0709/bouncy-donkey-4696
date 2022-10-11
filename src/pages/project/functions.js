@@ -2,7 +2,7 @@ import axios from "axios";
 const addProject = (payload) => {
     const token = localStorage.getItem("token");
     axios
-        .post("https://guarded-tundra-58795.herokuapp.com/project/create", payload, {
+        .post("https://lit-lowlands-05042.herokuapp.com/project/create", payload, {
             headers: {
                 authorization: "Bearer " + token,
                 "Content-Type": "application/json",
@@ -17,7 +17,7 @@ const addProject = (payload) => {
 const getProjectsAPI = () => {
     const token = localStorage.getItem("token");
     return axios
-        .get("https://guarded-tundra-58795.herokuapp.com/project/", {
+        .get("https://lit-lowlands-05042.herokuapp.com/project/", {
             headers: {
                 authorization: "Bearer " + token,
                 "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const getProjectsAPI = () => {
 }
 const getSingleProjectAPI = (id) => {
     const token = localStorage.getItem("token");
-    let url = "https://guarded-tundra-58795.herokuapp.com/project/" + id;
+    let url = "https://lit-lowlands-05042.herokuapp.com/project/" + id;
     return axios
         .get(url, {
             headers: {
@@ -46,7 +46,7 @@ const getSingleProjectAPI = (id) => {
 }
 const editSingleProjectAPI = (payload) => {
     const token = localStorage.getItem("token");
-    let url = "https://guarded-tundra-58795.herokuapp.com/project/" + payload._id + "/edit";
+    let url = "https://lit-lowlands-05042.herokuapp.com/project/" + payload._id + "/edit";
     return axios
         .patch(url, payload, {
             headers: {
@@ -62,7 +62,7 @@ const editSingleProjectAPI = (payload) => {
 }
 const deleteSingleProjectAPI = (id) => {
     const token = localStorage.getItem("token");
-    let url = "https://guarded-tundra-58795.herokuapp.com/project/" + id + "/delete";
+    let url = "https://lit-lowlands-05042.herokuapp.com/project/" + id + "/delete";
     return axios
         .delete(url, {
             headers: {
@@ -81,7 +81,7 @@ const deleteSingleProjectAPI = (id) => {
 const addClient = (payload) => {
     const token = localStorage.getItem("token");
     axios
-        .post("https://guarded-tundra-58795.herokuapp.com/client/create", payload, {
+        .post("https://lit-lowlands-05042.herokuapp.com/client/create", payload, {
             headers: {
                 authorization: "Bearer " + token,
                 "Content-Type": "application/json",
@@ -96,7 +96,7 @@ const addClient = (payload) => {
 const getClientsAPI = () => {
     const token = localStorage.getItem("token");
     return axios
-        .get("https://guarded-tundra-58795.herokuapp.com/client", {
+        .get("https://lit-lowlands-05042.herokuapp.com/client", {
             headers: {
                 authorization: "Bearer " + token,
                 "Content-Type": "application/json",
@@ -110,7 +110,7 @@ const getClientsAPI = () => {
 
 const deleteSingleClientAPI = (id) => {
     const token = localStorage.getItem("token");
-    let url = "https://guarded-tundra-58795.herokuapp.com/client/" + id + "/delete";
+    let url = "https://lit-lowlands-05042.herokuapp.com/client/" + id + "/delete";
     return axios
         .delete(url, {
             headers: {
